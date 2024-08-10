@@ -8,6 +8,8 @@ body {
     overflow-x: hidden;
     padding: 0;
     width: 100%;
+    background-color: #254E58;
+    /* Corporate Phthalo Green */
 }
 
 div#main {
@@ -23,10 +25,14 @@ section {
 
 section.min-height {
     min-height: 100vh;
+    background-color: #6E6658;
+    /* Pewter Blue for contrast */
 }
 
 section.padding {
     padding: 5rem 0;
+    background-color: #4F4A41;
+    /* Dark Slate Gray */
 }
 
 section img.background {
@@ -47,6 +53,8 @@ h1 {
     font-weight: 400;
     line-height: 0.8;
     margin: 0;
+    color: #88BDBC;
+    /* Pewter Blue */
 }
 
 h2 {
@@ -54,12 +62,16 @@ h2 {
     font-weight: 400;
     margin: 0;
     padding-top: 1rem;
+    color: #88BDBC;
+    /* Pewter Blue */
 }
 
 h3 {
     font-weight: 400;
     font-size: 1.25rem;
     margin: 0;
+    color: #88BDBC;
+    /* Pewter Blue */
 }
 
 p {
@@ -67,6 +79,8 @@ p {
     line-height: 1.5;
     margin-bottom: 0;
     font-weight: 300;
+    color: hsl(0, 0%, 3%);
+    /* Light color for contrast on dark backgrounds */
 }
 
 p.large {
@@ -79,23 +93,30 @@ p.small {
 
 hr {
     margin: 2.5rem;
+    border-color: #4F4A41;
+    /* Dark Slate Gray */
 }
 
 li {
     line-height: 1.7;
+    color: hwb(0 0% 100%);
+    /* Light color for contrast */
 }
 
 li::marker {
-    color: #4e567e;
+    color: #88BDBC;
+    /* Pewter Blue */
 }
 
 a {
-    color: black;
+    color: #88BDBC;
+    /* Pewter Blue */
     text-decoration: none;
 }
 
 a:hover {
-    color: #4e567e;
+    color: #4F4A41;
+    /* Dark Slate Gray */
 }
 
 .container {
@@ -103,16 +124,20 @@ a:hover {
     grid-gap: 20px;
     grid-template-columns: 330px 300px;
     margin: 20px auto;
+    background-color: #254E58;
+    /* Corporate Phthalo Green */
 }
 
 .container .box {
     border-radius: 10px;
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid #000000;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 24px 16px;
     text-align: center;
+    background-color: #6E6658;
+    /* Pewter Blue */
 }
 
 img.socialIcon {

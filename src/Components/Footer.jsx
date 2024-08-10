@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import devDotToIcon from "../images/socials/devdotto.svg";
+import facebookIcon from "../images/socials/facebook.svg";
+import whatsappIcon from "../images/socials/whatsapp.svg";
 import envelopeIcon from "../images/socials/envelope.svg";
 import gitHubIcon from "../images/socials/github.svg";
 import instagramIcon from "../images/socials/instagram.svg";
