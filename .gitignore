@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+
+# Logs
+.logs/
+logs
+*.log
+
+# Dependency directories
+/.pnp
+.pnp.js
+
+# Build directory
+dist/
+
+# Parcel cache (if using Parcel bundler)
+.parcel-cache/
+
+# dotenv environment variables file
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+
+# Linux system files
+*~
+
+# Compiled source files
+*.out
+*.class
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Sensitive data (if applicable)
+*.mdb
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+
+# Markdown linting file
+.markdownlint.json
+
+# Package files
+package-lock.json
