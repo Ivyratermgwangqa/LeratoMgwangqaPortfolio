@@ -8,7 +8,7 @@ const Header = () => {
                 display: "flex",
                 justifyContent: "center",
                 gap: "2rem",
-                background: "rgba(255,255,255,0.75)",
+                background: "#00000",
                 padding: "1rem",
                 top: 0,
                 width: "100%",
