@@ -13,10 +13,10 @@ const description =
 const skillsList = [
     "Back-end development",
     "User experience",
-    "",
-    "Focus group testing",
-    "Mobile user interfaces",
-    "Graphic design",
+    "Database Management",
+    "Unit-testing",
+    "Front-end development",
+    "Collaboration",
 ];
 
 const detailOrQuote =

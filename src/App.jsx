@@ -14,9 +14,11 @@ const siteProps = {
     email: "ivyratermgwangqa@gmail",
     gitHub: "Ivyratermgwangqa",
     instagram: "ivyrater0411",
-    linkedIn: "Lerato Mgwangqa",
+    linkedIn: "lerato-mgwangqa-941344238",
     medium: "Lerato Mgwangqa",
     twitter: "@LeratoMgwangqa",
+    facebook: "Lerato Mgwangqa",
+    whatsapp: "27672544756",
     youTube: "..........",
 };
 
