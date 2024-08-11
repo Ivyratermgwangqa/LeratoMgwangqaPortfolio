@@ -3,7 +3,7 @@ import React from "react";
 /**
  Check out https://unsplash.com to download a image you like.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/Black-building.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -28,7 +28,7 @@ const About = () => {
             <img className="background" src={image} alt={imageAltText} />
             <div
                 style={{
-                    backgroundColor: "white",
+                    // backgroundColor: "#2a8d94",
                     width: "50%",
                     padding: "4rem",
                     margin: "3rem auto",

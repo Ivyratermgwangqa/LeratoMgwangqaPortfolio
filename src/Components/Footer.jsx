@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import facebookIcon from "../images/socials/facebook.svg";
@@ -10,13 +10,6 @@ import linkedInIcon from "../images/socials/linkedin.svg";
 import mediumIcon from "../images/socials/medium.svg";
 import twitterIcon from "../images/socials/twitter.svg";
 import youTubeIcon from "../images/socials/youtube.svg";
-
-/**
- * 💡 Learning resources
- *
- *  HTML hyperlinks: https://www.w3schools.com/html/html_links.asp
- *  Opening links in new tabs: https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
- */
 
 const Footer = (props) => {
     const {
@@ -30,7 +23,22 @@ const Footer = (props) => {
         primaryColor,
         twitter,
         youTube,
+        facebook,
+        whatsapp,
     } = props;
+
+    const [description, setDescription] = useState("");
+
+    const handleDescriptionChange = (event) => {
+        setDescription(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (email) {
+            window.location.href = `mailto:${email}?subject=Contacting You&body=${encodeURIComponent(description)}`;
+        }
+    };
 
     return (
         <div
@@ -41,10 +49,47 @@ const Footer = (props) => {
                 alignItems: "center",
                 gap: "2.5rem",
                 padding: "5rem 0 3rem",
-                backgroundColor: primaryColor,
-                width: "100vw"
+                backgroundColor: "#070707",
+                width: "100vw",
             }}
         >
+            <form
+                onSubmit={handleSubmit}
+                style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    width: "100%",
+                    maxWidth: "500px",
+                    marginBottom: "2rem",
+                }}
+            >
+                <textarea
+                    value={description}
+                    onChange={handleDescriptionChange}
+                    placeholder="Enter your message here..."
+                    style={{
+                        width: "100%",
+                        padding: "1rem",
+                        borderRadius: "5px",
+                        border: "1px solid #ccc",
+                        marginBottom: "1rem",
+                    }}
+                />
+                <button
+                    type="submit"
+                    style={{
+                        padding: "0.75rem 2rem",
+                        borderRadius: "5px",
+                        backgroundColor: "#2a8d94",
+                        color: "#fff",
+                        border: "none",
+                        cursor: "pointer",
+                    }}
+                >
+                    Submit
+                </button>
+            </form>
             <div
                 style={{
                     display: "flex",
@@ -59,7 +104,7 @@ const Footer = (props) => {
                 )}
                 {devDotTo && (
                     <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
-                        <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
+                        <img src={mediumIcon} alt="Dev.to" className="socialIcon" />
                     </a>
                 )}
                 {gitHub && (
@@ -104,8 +149,26 @@ const Footer = (props) => {
                         <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
                     </a>
                 )}
+                {facebook && (
+                    <a
+                        href={`https://www.facebook.com/${facebook}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src={facebookIcon} alt="Facebook" className="socialIcon" />
+                    </a>
+                )}
+                {whatsapp && (
+                    <a
+                        href={`https://wa.me/${whatsapp}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img src={whatsappIcon} alt="WhatsApp" className="socialIcon" />
+                    </a>
+                )}
             </div>
-            <p className="small" style={{ marginTop: 0, color: "white" }}>
+            <p className="small" style={{ marginTop: "2rem", color: "white" }}>
                 Created by {name}
             </p>
         </div>
@@ -127,7 +190,8 @@ Footer.propTypes = {
     primaryColor: PropTypes.string,
     twitter: PropTypes.string,
     youTube: PropTypes.string,
-
+    facebook: PropTypes.string,
+    whatsapp: PropTypes.string,
 };
 
 export default Footer;

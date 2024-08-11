@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     padding: 0;
     width: 100%;
-    background-color: #254E58;
+    /* background-color: #254E58; */
     /* Corporate Phthalo Green */
 }
 
@@ -25,13 +25,13 @@ section {
 
 section.min-height {
     min-height: 100vh;
-    background-color: #6E6658;
+    background-color: #257d8d;
     /* Pewter Blue for contrast */
 }
 
 section.padding {
     padding: 5rem 0;
-    background-color: #4F4A41;
+    /* background-color: #4F4A41; */
     /* Dark Slate Gray */
 }
 
@@ -79,7 +79,7 @@ p {
     line-height: 1.5;
     margin-bottom: 0;
     font-weight: 300;
-    color: hsl(0, 0%, 3%);
+    color: hsl(185, 55%, 39%);
     /* Light color for contrast on dark backgrounds */
 }
 
@@ -99,7 +99,7 @@ hr {
 
 li {
     line-height: 1.7;
-    color: hwb(0 0% 100%);
+    color: hsl(185, 55%, 39%);
     /* Light color for contrast */
 }
 
@@ -124,19 +124,19 @@ a:hover {
     grid-gap: 20px;
     grid-template-columns: 330px 300px;
     margin: 20px auto;
-    background-color: #254E58;
+    /* background-color: #0e0e0e; */
     /* Corporate Phthalo Green */
 }
 
 .container .box {
     border-radius: 10px;
-    border: 1px solid #000000;
+    border: 1px solid hsl(188, 38%, 32%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 24px 16px;
     text-align: center;
-    background-color: #6E6658;
+    background-color: #000000;
     /* Pewter Blue */
 }
 
