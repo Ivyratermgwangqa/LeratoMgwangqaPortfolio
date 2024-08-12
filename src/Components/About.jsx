@@ -1,8 +1,4 @@
 import React from "react";
-
-/**
- Check out https://unsplash.com to download a image you like.
- */
 import image from "../images/Black-building.jpg";
 
 const imageAltText = "purple and blue abstract background";
@@ -28,11 +24,14 @@ const About = () => {
             <img className="background" src={image} alt={imageAltText} />
             <div
                 style={{
-                    // backgroundColor: "#2a8d94",
+                    backgroundColor: "#000000",
                     width: "50%",
                     padding: "4rem",
                     margin: "3rem auto",
                     textAlign: "center",
+                    borderRadius: "20px",  // Rounded corners
+                    border: "5px solid #88BDBC",  // Border with different color
+                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)", // Add a shadow
                 }}
             >
                 <h2>About Myself</h2>
