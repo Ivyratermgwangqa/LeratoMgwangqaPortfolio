@@ -7,27 +7,27 @@ const projectList = [
     {
         title: "RESIDENCE-BASED MANAGEMENT SYSTEM FOR STUDENTS 🎉",
         description: "Developed a system to manage student residence information efficiently.",
-        url: "..........",
+        url: "https://github.com/Ivyratermgwangqa/SPU-Residence-Management.git",
     },
     {
         title: "GITHUB TOP REPO ANALYSIS PROJECT",
         description: "This project provides an analysis of the top repositories on GitHub based on various metrics such as stars, forks, and activity.",
-        url: "...........",
+        url: "https://github.com/Ivyratermgwangqa/github-top-repos-analysis.git",
     },
     {
         title: "My Resume Site",
         description: "A simple site to show off my resume and projects.",
-        url: "............",
+        url: "https://lerato-mgwangqa-portfolio.vercel.app/",
     },
     {
         title: "C PRINTF",
         description: "Implemented a simplified version of the C printf function.",
-        url: "..........",
+        url: "https://github.com/Ivyratermgwangqa/printf.git",
     },
     {
         title: "Learnaz-Hub",
-        description: "",
-        url: "..........",
+        description: "Learnaz Hub is an E-learning platform designed for users of all ages to learn new skills and gain knowledge in various fields. Our platform offers a wide range of courses, from technical skills to creative arts, delivered by industry experts. Our goal is to make education accessible, engaging, and effective for everyone.",
+        url: "https://learnaz-hub.vercel.app/",
     },
 ];
 
