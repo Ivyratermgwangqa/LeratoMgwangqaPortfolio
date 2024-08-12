@@ -90,6 +90,7 @@ const Footer = (props) => {
                     Submit
                 </button>
             </form>
+            <p>Follow me on social media:</p>
             <div
                 style={{
                     display: "flex",
@@ -169,7 +170,7 @@ const Footer = (props) => {
                 )}
             </div>
             <p className="small" style={{ marginTop: "2rem", color: "white" }}>
-                Created by {name}
+                <p>&copy; 2024 {name}. All rights reserved.</p>
             </p>
         </div>
     );
