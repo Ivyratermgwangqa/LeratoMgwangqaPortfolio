@@ -82,7 +82,7 @@ const Footer = (props) => {
                         padding: "0.75rem 2rem",
                         borderRadius: "5px",
                         backgroundColor: "#2a8d94",
-                        color: "#fff",
+                        color: "#000000",
                         border: "none",
                         cursor: "pointer",
                     }}
