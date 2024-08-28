@@ -1,4 +1,6 @@
 import React from "react";
+import ParticleBackground from "./Components/ParticleBackground";
+import ParticleComponent from "./Components/ParticleComponent";
 
 import About from "./Components/About";
 import Footer from "./Components/Footer";
@@ -10,7 +12,7 @@ import "./styles.css";
 
 const siteProps = {
     name: "Lerato Mgwangqa",
-    title: "Software Engineer | Aspiring Ai Engineer",
+    title: "Software Engineer | Aspiring AI Engineer",
     email: "ivyratermgwangqa@gmail",
     gitHub: "Ivyratermgwangqa",
     instagram: "ivyrater0411",
@@ -28,10 +30,18 @@ const secondaryColor = "#D2F1E4";
 const App = () => {
     return (
         <div id="main">
+            {/* Background Particles */}
+            <ParticleBackground />
+
+            {/* Foreground Content */}
             <Header />
             <Home name={siteProps.name} title={siteProps.title} />
             <About />
             <Portfolio />
+
+            {/* Particle Overlay */}
+            <ParticleComponent />
+
             <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
         </div>
     );
