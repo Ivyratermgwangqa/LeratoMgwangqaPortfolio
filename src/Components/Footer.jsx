@@ -27,16 +27,21 @@ const Footer = (props) => {
         whatsapp,
     } = props;
 
-    const [description, setDescription] = useState("");
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
 
-    const handleDescriptionChange = (event) => {
-        setDescription(event.target.value);
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({ ...formData, [name]: value });
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
         if (email) {
-            window.location.href = `mailto:${email}?subject=Contacting You&body=${encodeURIComponent(description)}`;
+            window.location.href = `mailto:${email}?subject=Contacting You&body=${encodeURIComponent(formData.message)}`;
         }
     };
 
@@ -51,66 +56,127 @@ const Footer = (props) => {
                 padding: "5rem 0 3rem",
                 backgroundColor: "#070707",
                 width: "100vw",
+                textAlign: "center",
+                animation: "fadeIn 1s ease-in-out",
             }}
         >
-            <form
-                onSubmit={handleSubmit}
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    width: "100%",
-                    maxWidth: "500px",
-                    marginBottom: "2rem",
-                }}
-            >
-                <textarea
-                    value={description}
-                    onChange={handleDescriptionChange}
-                    placeholder="Enter your message here..."
-                    style={{
-                        width: "100%",
-                        padding: "1rem",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc",
-                        marginBottom: "1rem",
-                    }}
-                />
-                <button
-                    type="submit"
-                    style={{
-                        padding: "0.75rem 2rem",
-                        borderRadius: "5px",
-                        backgroundColor: "#2a8d94",
-                        color: "#000000",
-                        border: "none",
-                        cursor: "pointer",
-                    }}
-                >
-                    Submit
-                </button>
-            </form>
+            <div style={{ textAlign: "center", width: "100%", maxWidth: "600px" }}>
+                <h2>Contact Me</h2>
+                <p>If you have any questions or just want to get in touch, feel free to send me a message:</p>
+                <form id="contact-form" onSubmit={handleSubmit} style={{ width: "100%" }}>
+                    <div style={{ marginBottom: "1rem" }}>
+                        <label htmlFor="name">Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            placeholder="Enter your name"
+                            style={{
+                                width: "100%",
+                                padding: "0.75rem",
+                                borderRadius: "5px",
+                                border: "1px solid #19acc9",
+                                transition: "border-color 0.3s, box-shadow 0.3s",
+                            }}
+                        />
+                    </div>
+
+                    <div style={{ marginBottom: "1rem" }}>
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            placeholder="Enter your email"
+                            style={{
+                                width: "100%",
+                                padding: "0.75rem",
+                                borderRadius: "5px",
+                                border: "1px solid #13adcf",
+                                transition: "border-color 0.3s, box-shadow 0.3s",
+                            }}
+                        />
+                    </div>
+
+                    <div style={{ marginBottom: "1rem" }}>
+                        <label htmlFor="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
+                            placeholder="Enter your message"
+                            style={{
+                                width: "100%",
+                                padding: "0.75rem",
+                                borderRadius: "5px",
+                                border: "1px solid #14a0c7",
+                                transition: "border-color 0.3s, box-shadow 0.3s",
+                            }}
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        style={{
+                            padding: "0.75rem 2rem",
+                            borderRadius: "5px",
+                            backgroundColor: "#0ed0de",
+                            color: "#060606",
+                            border: "none",
+                            cursor: "pointer",
+                            marginTop: "1rem",
+                            transition: "background-color 0.3s, transform 0.3s",
+                        }}
+                    >
+                        Send
+                    </button>
+                </form>
+            </div>
             <p>Follow me on social media:</p>
             <div
                 style={{
                     display: "flex",
                     justifyContent: "center",
                     gap: "2.5rem",
+                    flexWrap: "wrap",
                 }}
             >
                 {email && (
                     <a href={`mailto:${email}`}>
-                        <img src={envelopeIcon} alt="email" className="socialIcon" />
+                        <img
+                            src={envelopeIcon}
+                            alt="email"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {devDotTo && (
                     <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
-                        <img src={mediumIcon} alt="Dev.to" className="socialIcon" />
+                        <img
+                            src={mediumIcon}
+                            alt="Dev.to"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {gitHub && (
                     <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer">
-                        <img src={gitHubIcon} alt="GitHub" className="socialIcon" />
+                        <img
+                            src={gitHubIcon}
+                            alt="GitHub"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {instagram && (
@@ -119,7 +185,12 @@ const Footer = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={instagramIcon} alt="Instagram" className="socialIcon" />
+                        <img
+                            src={instagramIcon}
+                            alt="Instagram"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {linkedIn && (
@@ -128,17 +199,32 @@ const Footer = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
+                        <img
+                            src={linkedInIcon}
+                            alt="LinkedIn"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {medium && (
                     <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer">
-                        <img src={mediumIcon} alt="Medium" className="socialIcon" />
+                        <img
+                            src={mediumIcon}
+                            alt="Medium"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {twitter && (
                     <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
-                        <img src={twitterIcon} alt="Twitter" className="socialIcon" />
+                        <img
+                            src={twitterIcon}
+                            alt="Twitter"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {youTube && (
@@ -147,7 +233,12 @@ const Footer = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
+                        <img
+                            src={youTubeIcon}
+                            alt="YouTube"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {facebook && (
@@ -156,7 +247,12 @@ const Footer = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={facebookIcon} alt="Facebook" className="socialIcon" />
+                        <img
+                            src={facebookIcon}
+                            alt="Facebook"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
                 {whatsapp && (
@@ -165,12 +261,17 @@ const Footer = (props) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <img src={whatsappIcon} alt="WhatsApp" className="socialIcon" />
+                        <img
+                            src={whatsappIcon}
+                            alt="WhatsApp"
+                            className="socialIcon"
+                            style={{ transition: "transform 0.3s" }}
+                        />
                     </a>
                 )}
             </div>
             <p className="small" style={{ marginTop: "2rem", color: "white" }}>
-                <p>&copy; 2024 {name}. All rights reserved.</p>
+                &copy; 2024 {name}. All rights reserved.
             </p>
         </div>
     );

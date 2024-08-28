@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../images/umbrella-4692572.jpg"; // Your background image
-
+import Carousel from "./Carousel";
 const imageAltText = "desktop with books and laptop";
 
 const projectList = [
@@ -8,26 +8,46 @@ const projectList = [
         title: "RESIDENCE-BASED MANAGEMENT SYSTEM FOR STUDENTS 🎉",
         description: "Developed a system to manage student residence information efficiently.",
         url: "https://github.com/Ivyratermgwangqa/SPU-Residence-Management.git",
+        images: [ // Add images for the carousel
+            "https://via.placeholder.com/400x300?text=Project+1+Image+1",
+            "https://via.placeholder.com/400x300?text=Project+1+Image+2",
+        ],
     },
     {
         title: "GITHUB TOP REPO ANALYSIS PROJECT",
         description: "This project provides an analysis of the top repositories on GitHub based on various metrics such as stars, forks, and activity.",
         url: "https://github.com/Ivyratermgwangqa/github-top-repos-analysis.git",
+        images: [ // Add images for the carousel
+            "https://via.placeholder.com/400x300?text=Project+2+Image+1",
+            "https://via.placeholder.com/400x300?text=Project+2+Image+2",
+        ],
     },
     {
         title: "My Resume Site",
         description: "A simple site to show off my resume and projects.",
         url: "https://lerato-mgwangqa-portfolio.vercel.app/",
+        images: [ // Add images for the carousel
+            "https://via.placeholder.com/400x300?text=Project+3+Image+1",
+            "https://via.placeholder.com/400x300?text=Project+3+Image+2",
+        ],
     },
     {
         title: "C PRINTF",
         description: "Implemented a simplified version of the C printf function.",
         url: "https://github.com/Ivyratermgwangqa/printf.git",
+        images: [ // Add images for the carousel
+            "https://via.placeholder.com/400x300?text=Project+4+Image+1",
+            "https://via.placeholder.com/400x300?text=Project+4+Image+2",
+        ],
     },
     {
         title: "Learnaz-Hub",
         description: "Learnaz Hub is an E-learning platform designed for users of all ages to learn new skills and gain knowledge in various fields. Our platform offers a wide range of courses, from technical skills to creative arts, delivered by industry experts. Our goal is to make education accessible, engaging, and effective for everyone.",
         url: "https://learnaz-hub.vercel.app/",
+        images: [ // Add images for the carousel
+            "https://via.placeholder.com/400x300?text=Project+5+Image+1",
+            "https://via.placeholder.com/400x300?text=Project+5+Image+2",
+        ],
     },
 ];
 
