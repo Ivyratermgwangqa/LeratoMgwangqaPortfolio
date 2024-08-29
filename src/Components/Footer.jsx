@@ -130,7 +130,7 @@ const Footer = (props) => {
                             borderRadius: "5px",
                             backgroundColor: "#0ed0de",
                             color: "#060606",
-                            border: "none",
+                            border: "rtym 1px solid #000000",
                             cursor: "pointer",
                             marginTop: "1rem",
                             transition: "background-color 0.3s, transform 0.3s",

@@ -145,8 +145,15 @@ img.socialIcon {
     width: 30px;
 }
 
-/* Add to your CSS file or style object */
 button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #2ca8c1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -194,49 +201,4 @@ textarea:focus {
 
 #footer {
     animation: fadeIn 1s ease-in-out;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel-slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    /* Adjust as needed */
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
 }
