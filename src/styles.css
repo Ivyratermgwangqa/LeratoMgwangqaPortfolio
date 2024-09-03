@@ -145,7 +145,7 @@ img.socialIcon {
     width: 30px;
 }
 
-button {
+/* button {
     background: none;
     border: none;
     font-size: 2rem;
@@ -155,7 +155,7 @@ button {
     top: 50%;
     transform: translateY(-50%);
     transition: background-color 0.3s, transform 0.3s;
-}
+} */
 
 button:hover {
     background-color: #1a6a6f;
